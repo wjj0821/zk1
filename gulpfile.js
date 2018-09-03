@@ -6,7 +6,7 @@ var scss = require("gulp-sass"); //scss转为css
 var mincss = require("gulp-clean-css"); //压缩css
 var minJs = require("gulp-uglify");
 var server = require("gulp-webserver");
-
+var data = require("./src/data/data.json");
 //转为css并压缩
 gulp.task("sassTask", function() {
         return gulp.src("./src/scss/*.scss")
@@ -35,7 +35,7 @@ gulp.task("server", function() {
                     return false;
                 }
                 if (pathname === "/api/list") {
-
+                    res.end(JSON.stringify({ "code": 1, "msg": "成功", data: data }))
                 } else if (pathname === "/") {
                     var pathname = pathname === "/" ? "/index.html" : pathname;
                     res.end(fs.readFileSync(path.join(__dirname, "src", pathname)));
