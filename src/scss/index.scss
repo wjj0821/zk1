@@ -1,3 +1,71 @@
-body {
-    background: pink;
+body,
+html.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        padding-top: 40px;
+        width: 60%;
+    }
+}
+
+section {
+    flex: 1;
+    .sr {
+        width: 100%;
+        input {
+            width: 64%;
+            margin-left: 10%;
+            border: none;
+            height: 40px;
+            border: 1px solid #000;
+        }
+        button {
+            width: 16%;
+            height: 42px;
+            border: none;
+            border: 1px solid #000;
+            color: aqua;
+            background: #fff;
+        }
+    }
+    .content {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-bottom: 1px solid #ccc;
+        h1 {
+            width: 96%;
+            margin-left: 2%;
+            height: 30px;
+            font-size: 14px;
+        }
+        .imgs {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            img {
+                width: 30%;
+                height: auto;
+                margin-left: 10px;
+            }
+        }
+    }
 }

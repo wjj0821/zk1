@@ -28,7 +28,7 @@ gulp.task("minjs", function() {
 gulp.task("server", function() {
     return gulp.src("src")
         .pipe(server({
-            port: 8998,
+            port: 8000,
             middleware: function(req, res, next) {
                 var pathname = url.parse(req.url).pathname;
                 if (pathname === "/") {
